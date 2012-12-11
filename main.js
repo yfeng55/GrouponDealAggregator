@@ -1,4 +1,3 @@
-//console.log('hello');
 
 $('.showinfo').on('click', function() {
 	if ($(this).next().css('display') === 'none') {
@@ -11,7 +10,7 @@ $('.showinfo').on('click', function() {
 
 ////////////////////////////////////////////////////////
 
-var center = new google.maps.LatLng(40.1667, -100.0367);
+var center = new google.maps.LatLng(42.1667, -100.0367);
 
 var myOptions = {
 	zoom: 4,
@@ -22,22 +21,29 @@ var map = new google.maps.Map(document.getElementById('map'), myOptions);
 
 ///////////////////////////
 
-$.getJSON('groupon.php', function(data) {
-    /* data will hold the php array as a javascript object */
-    
+//console.log(data);
 
-});
+for (i=0; i<data.deals.length; i=i+1){
 
-
-/*
-function plotDeals(data){
-	for (i=0; i<data.events.event.length; i=i+1){
-
-		var marker = new google.maps.Marker({
-		position: new google.maps.LatLng(data.events.event[i].latitude, data.events.event[i].longitude),
-		 title: data.events.event[i].title
-		 });
-		 marker.setMap(map);
-	}
+	var marker = new google.maps.Marker({
+	position: new google.maps.LatLng(data.deals[i].division.lat, data.deals[i].division.lng),
+	 title: data.deals[i].title
+	 });
+	 marker.setMap(map);
 }
-*/
+
+//////////////////////////
+
+$.ajax({
+	url: 'groupon-json.php',
+	data: {
+		name: name
+	},
+	type: 'GET',
+	success: function(response) {
+		$('#deals_container').html(response);
+	},
+	error: function(err1, err2, err3) {
+		console.log(err1, err2, err3);
+	}
+});

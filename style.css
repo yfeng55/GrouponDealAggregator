@@ -1,24 +1,90 @@
 body {
-	font-family: arial;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #bfe08a;
 }
-h1{
+
+input { padding:5px; border:2px solid #999; border-radius:4px; -moz-border-radius:4px; -web-kit-border-radius:4px; -khtml-border-radius:4px; }
+select { padding:5px; border:2px solid #999; border-radius:4px; -moz-border-radius:4px; -web-kit-border-radius:4px; -khtml-border-radius:4px; }
+
+
+.button {
+	-moz-box-shadow:inset 0px 0px 0px 0px #a4e271;
+	-webkit-box-shadow:inset 0px 0px 0px 0px #a4e271;
+	box-shadow:inset 0px 0px 0px 0px #a4e271;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #89c403), color-stop(1, #77a809) );
+	background:-moz-linear-gradient( center top, #89c403 5%, #77a809 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#89c403', endColorstr='#77a809');
+	background-color:#89c403;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #74b807;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
 	font-size:20px;
+	font-weight:bold;
+	padding:9px 15px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #528009;
+}.button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #77a809), color-stop(1, #89c403) );
+	background:-moz-linear-gradient( center top, #77a809 5%, #89c403 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77a809', endColorstr='#89c403');
+	background-color:#77a809;
+}.button:active {
+	position:relative;
+	top:1px;
+}
+
+a{
+	color:#133449;
+}
+
+#form{
+	width:500px;
+	height:290px;
+	padding: 30px;
+	margin: auto;
+	border:1px solid #B5B5B5;
+	background-color: #f9f9f9;
+	font-size: 13px;
+
+		position:absolute;
+	left:50%;
+	top:50%;
+	margin:-160px 0 0 -265px;
+}
+
+#header{
+	width:900px;
+	margin:auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+h2{
+	font-size:15px;
 	font-style: italic;
 	margin-top:0px;
+	margin-bottom: 10px;
 }
 .dealthumb{
-	width:170px;
-	height:100px;
+	width:160px;
+	height:80px;
 	float:left;
 	margin-right: 10px;
 	margin-bottom: 10px;
 }
 
 #dealcontainer{
-	width:100%;
+	width:900px;
 	padding: 10px;
+	margin: auto;
 	border:1px solid #B5B5B5;
-	background-color: #E8E8E8;
+	background-color: #f9f9f9;
+	font-size: 13px;
+	line-height:15px;
 }
 
 .moreinfo{
@@ -27,6 +93,16 @@ h1{
 }
 
 #map {
-	height: 450px;
-	width: 800px;
+	height: 530px;
+	width: 920px;
+	margin: auto;
+	border:1px solid #B5B5B5;
+}
+
+.divider{
+	width:1020px;
+	margin-top: 25px;
+	margin-bottom: 20px;
+	border-style: solid 1px;
+	color: #6d8841;
 }
