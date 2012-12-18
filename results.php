@@ -17,7 +17,7 @@
 
 <?php
 	
-	$dealObj = Groupon::getDeals_curl();
+	$dealObj = Groupon::getDeals_curl($_REQUEST['zip'], $_REQUEST['channel']);
 
 	foreach($dealObj->deals as $deal) {
 

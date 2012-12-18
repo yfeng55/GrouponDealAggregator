@@ -16,7 +16,7 @@
 
 <br/><br/>
 
-<h2>Type:</h2>
+<h2>Deal Type:</h2>
 <select name="channel" class="formitem">
 	<option value="getaways">getaways</option>
 	<option value="goods">goods</option>
@@ -30,5 +30,17 @@
 
 </div>
 
+<div id="quicklinks">
+	<a href="#" id="90007" class="quicklink">Los Angeles</a>
+	<a href="#" id="10036" class="quicklink">New York</a>
+	<a href="#" id="60601" class="quicklink">Chicago</a>
+</div>
+
+<br style="clear:both"/>
+
+<div id="ajaxresults"></div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="ajax.js"></script>
 </body>
 </html>

@@ -1,16 +1,16 @@
 <?php
 
 class Groupon {
-	public static function getDeals_curl() {
+	public static function getDeals_curl($zip, $channel) {
 
 		$key = "f2ce66d9cfec8ff093473773960813542faa7564";
 		$url = 'http://api.groupon.com/v2/deals.json?client_id='.$key;
 
-		if(!empty($_REQUEST['zip'])){
-			$url = $url.'&postal_code='.$_REQUEST['zip'];
+		if(!empty($zip)){
+			$url = $url.'&postal_code='.$zip;
 		}
-		if(!empty($_REQUEST['channel'])){
-			$url = $url.'&channel_id='.$_REQUEST['channel'];
+		if(!empty($channel)){
+			$url = $url.'&channel_id='.$channel;
 		}
 
 
