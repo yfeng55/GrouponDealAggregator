@@ -1,67 +1,14 @@
-# [Laravel](http://laravel.com) - A PHP Framework For Web Artisans
+# ITP 404 Final Project - Groupon Search
 
-Laravel is a clean and classy framework for PHP web development. Freeing you
-from spaghetti code, Laravel helps you create wonderful applications using
-simple, expressive syntax. Development should be a creative experience that you
-enjoy, not something that is painful. Enjoy the fresh air.
+My final project is a website that allows you to search for deals on groupon. Since many deals offered by groupon have an associated redemption location (especially getaways), I thought it would be convenient to plot the locations for these deals on a google map once the user specified a certain deal type and zip code to center his/her search around. 
 
-[Official Website & Documentation](http://laravel.com)
+## Project Requirements
+1. **Created in Laravel MVC Framework:** yes
+2. **One REST Web Service of Choice:** used the Groupon API
+3. **Another Web Service:** Google Maps API
+4. **AJAX using jQuery:** Used the $.ajax() method to create "quick links" for three cities on the front page. This allows a div to be filled with a list of deals without the entire page reloading.   
+5. **jQuery Interactivity:** used jQuery to hide and show additional information for the list of deals on the results page. 
 
-## Feature Overview
-
-- Simple routing using Closures or controllers.
-- Views and templating.
-- Driver based session and cache handling.
-- Database abstraction with query builder.
-- Authentication.
-- Migrations.
-- PHPUnit Integration.
-- A lot more.
-
-## A Few Examples
-
-### Hello World:
-
-```php
-<?php
-
-Route::get('/', function()
-{
-	return "Hello World!";
-});
-```
-
-### Passing Data To Views:
-
-```php
-<?php
-
-Route::get('user/(:num)', function($id)
-{
-	$user = DB::table('users')->find($id);
-
-	return View::make('profile')->with('user', $user);
-});
-```
-
-### Redirecting & Flashing Data To The Session:
-
-```php
-<?php
-
-return Redirect::to('profile')->with('message', 'Welcome Back!');
-```
-
-## Contributing to Laravel
-
-Contributions are encouraged and welcome; however, please review the Developer
-Certificate of Origin in the "license.txt" file included in the repository. All
-commits must be signed off using the `-s` switch.
-
-```bash
-git commit -s -m "this commit will be signed off automatically!"
-```
-
-## License
-
-Laravel is open-sourced software licensed under the MIT License.
+### Additional Elements
+- **W3C geolocation API - I used the W3C geolocation API to determine a current latitude/longitude and plot this on the google map so that the user can see where deals are relative to the current position.
+- **Laravel Data validation class:** I used Laravel's data validation class to make sure that the zip code was typed in, was exactly 5 characters long, and was numeric in the form page.

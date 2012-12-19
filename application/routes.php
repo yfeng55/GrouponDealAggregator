@@ -33,7 +33,6 @@
 */
 
 Route::controller('groupon');
-Route::controller('grouponajax');
 
 
 

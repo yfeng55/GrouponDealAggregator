@@ -36,6 +36,11 @@
 	<a href="#" id="60601" class="quicklink">Chicago</a>
 </div>
 
+<?php
+
+?>
+
+
 <br style="clear:both"/>
 
 <div id="ajaxresults"></div>

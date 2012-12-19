@@ -2,7 +2,7 @@
 
 //require 'functions.php';
 
-$zip = $_GET['zip'];
+//$zip = $_GET['zip'];
 
 echo "<br/><p><em><b>Deals for the zip code: ".$zip."</b></em></p>";
 

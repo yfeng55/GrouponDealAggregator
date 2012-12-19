@@ -5,7 +5,7 @@ function showDeals(zip){
 		$('#ajaxresults').html('<img src="img/ajax-loader.gif">');
 
 		$.ajax({
-		  url: '/grouponajax',
+		  url: './groupon/ajax_results',
 		  type: 'GET',
 		  data: {
 		  		zip: zip,
